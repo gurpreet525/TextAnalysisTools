@@ -11,13 +11,14 @@ namespace TextAnalysisTools
         static void Main(string[] args)
         {
             Program a = new Program();
-            Console.WriteLine("the longest word is :");
-            Console.WriteLine(a.MyFunctionA("Ada Lovelace wrote the first algorithm designed processing by an Analytical Engine."));
+            Console.WriteLine("the longest word is : ");
+            Console.WriteLine(a.MyFunctionA("Ada Lovelace wrote the first algorithm designed for processing by an Analytical Engine."));
+            Console.ReadLine();
         }
 
-        public MyFunctionA(string input)
+        public String MyFunctionA(string input)
         {
-            //Write a C# program to find the longest word in a string.
+            // Write a C# program to find the longest word in a string.
             string[] words = input.Split(' ');
 
             int wordArrayLength = words.Length;
@@ -25,10 +26,10 @@ namespace TextAnalysisTools
 
             foreach (var word in words)
             {
-                //TODO
+                // TODO
             }
-            //loop post condition: we now have array wordsLength which
-            //contains the lengths of each word
+            // loop post condition: we now have array word Length which
+            // contains the lengths of each word
 
             string currentWord = words[0];
             string nextWord;
@@ -37,9 +38,12 @@ namespace TextAnalysisTools
             {
                 currentWord = words[y];
                 nextWord = words[y + 1];
-                //TODO: Use an IF Statement to make sure that variable longestWord
-                // is always set to the Longest Word in th input string
+                // TODO: Use an IF Statement to make sure that variable longest Word
+                // is always set to the Longest Word in the input string
             }
+
+            return currentWord;
         }
+
     }
 }
